@@ -91,6 +91,22 @@ Individual users can also help support open geo NLP research by making a monthly
 <a href="https://opencollective.com/libpostal/backer/28/website" target="_blank"><img src="https://opencollective.com/libpostal/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/libpostal/backer/29/website" target="_blank"><img src="https://opencollective.com/libpostal/backer/29/avatar.svg"></a>
 
+Docker image
+------------
+
+Docker image with 
+    - libpostal
+    - postal (python bindings)
+    - python 3.8
+
+```
+# build image
+docker build --pull --rm -t libpostal-python-buster:latest .
+
+# run docker container
+docker run -it libpostal:latest /bin/bash
+```
+
 Installation (Mac/Linux)
 ------------------------
 
