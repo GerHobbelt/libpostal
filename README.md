@@ -101,7 +101,7 @@ Docker image with
 
 ```
 # build image
-docker build --pull --rm -t libpostal-python-buster:latest .
+docker build --pull --rm --no-cache -t libpostal-python-buster:latest .
 
 # run docker container
 docker run -it libpostal:latest /bin/bash
