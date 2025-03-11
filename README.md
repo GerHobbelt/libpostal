@@ -412,23 +412,18 @@ Libpostal is designed to be used by higher-level languages.  If you don't see yo
 - LuaJIT: [lua-resty-postal](https://github.com/bungle/lua-resty-postal)
 - Perl: [Geo::libpostal](https://metacpan.org/pod/Geo::libpostal)
 - Elixir: [Expostal](https://github.com/SweetIQ/expostal)
+- Haskell: [haskell-postal](http://github.com/netom/haskell-postal)
 - Rust: [rustpostal](https://crates.io/crates/rustpostal)
 
-**Database extensions**
+**Unofficial database extensions**
 
 - PostgreSQL: [pgsql-postal](https://github.com/pramsey/pgsql-postal)
 
-**Unofficial REST API**
+**Unofficial servers**
 
-- Libpostal REST: [libpostal REST](https://github.com/johnlonganecker/libpostal-rest)
-
-**Libpostal REST Docker**
-
-- Libpostal REST Docker [Libpostal REST Docker](https://github.com/johnlonganecker/libpostal-rest-docker)
-
-**Libpostal ZeroMQ Docker**
-
-- Libpostal ZeroMQ Docker image: [pasupulaphani/libpostal-zeromq](https://hub.docker.com/r/pasupulaphani/libpostal-zeromq/) , Source: [Github](https://github.com/pasupulaphani/libpostal-docker) 
+- Libpostal REST Go Docker: [libpostal-rest-docker](https://github.com/johnlonganecker/libpostal-rest-docker)
+- Libpostal REST FastAPI Docker: [libpostal-fastapi](https://github.com/alpha-affinity/libpostal-fastapi)
+- Libpostal ZeroMQ Docker: [libpostal-zeromq](https://github.com/pasupulaphani/libpostal-docker)
 
 
 Tests
@@ -525,7 +520,7 @@ language (IX => 9) which occur in the names of many monarchs, popes, etc.
 
 - **Fast, accurate tokenization/lexing**: clocked at > 1M tokens / sec,
 implements the TR-29 spec for UTF8 word segmentation, tokenizes East Asian
-languages chracter by character instead of on whitespace.
+languages character by character instead of on whitespace.
 
 - **UTF8 normalization**: optionally decompose UTF8 to NFD normalization form,
 strips accent marks e.g. à => a and/or applies Latin-ASCII transliteration.
@@ -549,6 +544,7 @@ Non-goals
 
 - Verifying that a location is a valid address
 - Actually geocoding addresses to a lat/lon (that requires a database/search index)
+- Extracting addresses from free text
 
 Raison d'être
 -------------
