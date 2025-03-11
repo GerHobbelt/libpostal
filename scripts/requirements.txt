@@ -1,6 +1,6 @@
 boto3==1.4.0
 botocore==1.4.53
-Fiona==1.6.3.post1
+Fiona==1.10.0
 PyYAML==5.4
 Rtree==0.8.2
 Shapely==1.5.14
@@ -10,10 +10,10 @@ click-plugins==1.0.3
 cligj==0.4.0
 cssselect==0.9.1
 distribute==0.7.3
-future==0.15.2
+future==0.18.3
 futures==3.0.5
 ftfy==4.2.0
-gevent==1.1.2
+gevent==23.9.0
 greenlet==0.4.10
 jmespath==0.9.0
 leveldb==0.193
