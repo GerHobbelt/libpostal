@@ -106,7 +106,15 @@ sudo apt-get install -y curl build-essential autoconf automake libtool pkg-confi
 sudo yum install curl autoconf automake libtool pkgconfig
 ```
 
-**On Mac OSX**
+**On macOS**
+
+Install with one command via [MacPorts](https://www.macports.org/):
+```
+port install libpostal
+```
+
+Or as follows with [Homebrew](https://brew.sh/):
+
 ```
 brew install curl autoconf automake libtool pkg-config
 ```
@@ -120,6 +128,8 @@ git clone https://github.com/openvenues/libpostal
 cd libpostal
 
 ./bootstrap.sh
+./configure --datadir=[...some dir with a few GB of space where a "libpostal" directory exists or can be created/modified...]
+make -j4
 
 # For Intel/AMD processors and the default model
 ./configure --datadir=[...some dir with a few GB of space...]
@@ -413,6 +423,7 @@ Libpostal is designed to be used by higher-level languages.  If you don't see yo
 - Perl: [Geo::libpostal](https://metacpan.org/pod/Geo::libpostal)
 - Elixir: [Expostal](https://github.com/SweetIQ/expostal)
 - Haskell: [haskell-postal](http://github.com/netom/haskell-postal)
+- Rust: [rust-postal](https://github.com/pnordahl/rust-postal)
 - Rust: [rustpostal](https://crates.io/crates/rustpostal)
 
 **Unofficial database extensions**
@@ -498,7 +509,7 @@ optionally be separated so Rosenstraße and Rosen Straße are equivalent.
 for a wide variety of countries and languages, not just US/English. 
 The model is trained on over 1 billion addresses and address-like strings, using the
 templates in the [OpenCage address formatting repo](https://github.com/OpenCageData/address-formatting) to construct formatted,
-tagged traning examples for every inhabited country in the world. Many types of [normalizations](https://github.com/openvenues/libpostal/blob/master/scripts/geodata/addresses/components.py)
+tagged training examples for every inhabited country in the world. Many types of [normalizations](https://github.com/openvenues/libpostal/blob/master/scripts/geodata/addresses/components.py)
 are performed to make the training data resemble real messy geocoder input as closely as possible.
 
 - **Language classification**: multinomial logistic regression
@@ -650,7 +661,7 @@ libpostal is written in modern, legible, C99 and uses the following conventions:
 - Confines almost all mallocs to *name*_new and all frees to *name*_destroy
 - Efficient existing implementations for simple things like hashtables
 - Generic containers (via [klib](https://github.com/attractivechaos/klib)) whenever possible
-- Data structrues take advantage of sparsity as much as possible
+- Data structures take advantage of sparsity as much as possible
 - Efficient double-array trie implementation for most string dictionaries
 - Cross-platform as much as possible, particularly for *nix
 
