@@ -20,7 +20,7 @@ jobs:
         os: [ubuntu-latest, macos-13]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install Dependencies Linux
         if: matrix.os == 'ubuntu-latest'
